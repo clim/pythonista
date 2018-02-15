@@ -5,8 +5,8 @@ import console
 import clipboard
 import webbrowser
 
-celsius = int(sys.argv[1])
+celsius = float(sys.argv[1])
 fahrenheit = (9/5 * celsius) + 32
 
-clipboard.set(str(fahrenheit))
+clipboard.set(str(celsius) + '⁰ C = ' + str(round(fahrenheit, 1)) + '⁰ F')
 webbrowser.open('workflow://')
